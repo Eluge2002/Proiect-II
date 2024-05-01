@@ -134,3 +134,13 @@ D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.Properties.Re
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.signup.resources
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.MediaPlayer.dll
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMLSS.dll
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPDXMLib.dll
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPLauncher.dll
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPLib.dll
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.exe
+D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.pdb
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.signup.resources
