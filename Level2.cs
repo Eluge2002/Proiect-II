@@ -1,8 +1,12 @@
 ﻿using Level_2;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using proiect;
 using System;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Resources;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 
@@ -10,7 +14,8 @@ namespace Level_2
 {
     public partial class Level2 : Form
     {
-        
+        private IMongoCollection<Cont> ContCollection;
+
         WindowsMediaPlayer gameMedia;
         WindowsMediaPlayer shootgMedia;
         WindowsMediaPlayer explosion;
@@ -29,10 +34,37 @@ namespace Level_2
         bool pause;
         bool gameIsOver;
 
-        public Level2()
+        private string currentUsername;
+
+        public Level2(string username)
         {
             InitializeComponent();
             Controls.Add(Player);
+            currentUsername = username;
+            InitializeMongoDB();
+        }
+        private void InitializeMongoDB()
+        {
+            const string connectionUri = "mongodb+srv://cbotar82:I36rhl3i86onf6b5@cluster0.bguofu2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Send a ping to confirm a successful connection
+            var database = client.GetDatabase("Conturi"); // Replace "your_database_name" with your actual database name
+            ContCollection = database.GetCollection<Cont>("Cont");
+
+            // Send a ping to confirm a successful connection
+            try
+            {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
 
@@ -169,7 +201,7 @@ namespace Level_2
         }
 
 
-        public void GameOver(String str)
+        public async void GameOver(String str)
         {
             label1.Text = str;
             int x = (this.ClientSize.Width-label1.Width)/2;
@@ -181,6 +213,7 @@ namespace Level_2
 
             gameMedia.controls.stop();
             StopTimers();
+            await UpdateScoreInDatabase(currentUsername, score);
         }
         public void StopTimers()
         {
@@ -292,20 +325,26 @@ namespace Level_2
                 }
             }
         }
+        private async Task UpdateScoreInDatabase(string playerName, int newScore)
+        {
+            var filter = Builders<Cont>.Filter.Eq("Username", playerName);
+            var update = Builders<Cont>.Update.Set("Level2", newScore);
+            await ContCollection.UpdateOneAsync(filter, update);
+        }
 
         public void replayBtn_Click_1(object sender, EventArgs e)
         {
 
             this.Controls.Clear();
             this.Hide();
-            Level2 level2 = new Level2();   
+            Level2 level2 = new Level2(currentUsername);   
             level2.Show();
 
         }
        
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
-            joc menu = new joc();
+            joc menu = new joc(currentUsername);
             menu.Show();
             this.Close();
         }

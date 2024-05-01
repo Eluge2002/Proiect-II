@@ -1,8 +1,13 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace proiect
 {
@@ -11,15 +16,40 @@ namespace proiect
         private bool right, left, space;
         private int score;
         private List<PictureBox> enemies = new List<PictureBox>();
-
-        public Level3()
+        private string currentUsername;
+        private IMongoCollection<Cont> ContCollection;
+        public Level3(string username)
         {
             InitializeComponent();
             lbl_over.Hide();
             return_btn.Hide();
             InitializeEnemies(); // Inițializăm inamicii la început
+            currentUsername = username;
+            InitializeMongoDB();
         }
+        private void InitializeMongoDB()
+        {
+            const string connectionUri = "mongodb+srv://cbotar82:I36rhl3i86onf6b5@cluster0.bguofu2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Send a ping to confirm a successful connection
+            var database = client.GetDatabase("Conturi"); // Replace "your_database_name" with your actual database name
+            ContCollection = database.GetCollection<Cont>("Cont");
 
+            // Send a ping to confirm a successful connection
+            try
+            {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
         void InitializeEnemies()
         {
             // Adăugăm inamicii inițiali în listă
@@ -28,6 +58,12 @@ namespace proiect
             enemies.Add(enemy1);
             enemies.Add(enemy2);
             enemies.Add(enemy3);
+        }
+        private async Task UpdateScoreInDatabase(string playerName, int newScore)
+        {
+            var filter = Builders<Cont>.Filter.Eq("Username", playerName);
+            var update = Builders<Cont>.Update.Set("Level3", newScore);
+            await ContCollection.UpdateOneAsync(filter, update);
         }
 
         void Add_Bullet()
@@ -44,7 +80,7 @@ namespace proiect
             bullet.BringToFront();
         }
 
-        void Game_Result()
+        async void Game_Result()
         {
             foreach (PictureBox enemy in enemies)
             {
@@ -74,6 +110,7 @@ namespace proiect
                     }
                 }
             }
+            await UpdateScoreInDatabase(currentUsername, score);
         }
 
         void Bullet_Movement()
@@ -150,7 +187,7 @@ namespace proiect
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close(); // Închide formularul Level3
-            joc joc = new joc(); // Creează un nou obiect Joc
+            joc joc = new joc(currentUsername); // Creează un nou obiect Joc
             joc.Show(); // Deschide formularul Joc
         }
 

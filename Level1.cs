@@ -1,8 +1,11 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -15,6 +18,7 @@ namespace proiect
 {
     public partial class Level1 : Form
     {
+        private IMongoCollection<Cont> ContCollection;
         PictureBox[] stars;
         int playerSpeed;
 
@@ -36,24 +40,56 @@ namespace proiect
         bool pause;
         bool gameISOVER;
 
+        private string currentUsername;
+
         WindowsMediaPlayer explosion;
         WindowsMediaPlayer gameMedia;
         WindowsMediaPlayer shootgMedia;
        
-        public Level1()
+        public Level1(string username)
         {
             InitializeComponent();
             explosion=new WindowsMediaPlayer();
             gameMedia = new WindowsMediaPlayer();
             shootgMedia = new WindowsMediaPlayer();
             Controls.Add(Player);
-            
+            InitializeMongoDB();
+            currentUsername = username;
+        }
+        private void InitializeMongoDB()
+        {
+            const string connectionUri = "mongodb+srv://cbotar82:I36rhl3i86onf6b5@cluster0.bguofu2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Send a ping to confirm a successful connection
+            var database = client.GetDatabase("Conturi"); // Replace "your_database_name" with your actual database name
+            ContCollection = database.GetCollection<Cont>("Cont");
+
+            // Send a ping to confirm a successful connection
+            try
+            {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+        private async Task UpdateScoreInDatabase(string playerName, int newScore)
+        {
+            var filter = Builders<Cont>.Filter.Eq("Username", playerName);
+            var update = Builders<Cont>.Update.Set("Level1", newScore);
+            await ContCollection.UpdateOneAsync(filter, update);
         }
 
         private void Level1_Load(object sender, EventArgs e)
         {
+           
 
-            
             pause = false;
             gameISOVER = false;
             score = 0;
@@ -357,19 +393,29 @@ namespace proiect
                 }
             }
         }
-        public void GameOver(String str)
-        {
-            labelState.Text = str;
-            int x = (this.ClientSize.Width-labelState.Width)/2;
-            int y = (this.ClientSize.Height-labelState.Height)/2;
-            labelState.Location = new Point(x, y);
-            labelState.Visible = true;
-            replayBtn.Visible = true;
-            exit.Visible = true;
+       public async void GameOver(string str)
+{
+    labelState.Text = str;
+    int x = (this.ClientSize.Width - labelState.Width) / 2;
+    int y = (this.ClientSize.Height - labelState.Height) / 2;
+    labelState.Location = new Point(x, y);
+    labelState.Visible = true;
+    replayBtn.Visible = true;
+    exit.Visible = true;
 
-            gameMedia.controls.stop();
-            StopTimers();
-        }
+    gameMedia.controls.stop();
+    StopTimers();
+
+            // Update the score in the database
+            var cont = new Cont
+            {
+                Username = currentUsername
+
+            };
+    await UpdateScoreInDatabase(currentUsername, score);
+
+  
+}
         public void CollisionWithEnemMun()
         {
             if (!pause && !gameISOVER)
@@ -418,7 +464,7 @@ namespace proiect
            
             this.Controls.Clear();
             this.Hide();
-            Level1 level1 = new Level1();
+            Level1 level1 = new Level1(currentUsername);
             level1.Show();
             
 
@@ -427,7 +473,7 @@ namespace proiect
 
         private void exit_Click(object sender, EventArgs e)
         {
-            joc menu= new joc();
+            joc menu= new joc(currentUsername);
             menu.Show();
             this.Close();
         }

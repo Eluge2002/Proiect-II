@@ -1,4 +1,8 @@
-﻿using System;
+﻿
+using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
+using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
 
@@ -7,7 +11,8 @@ namespace proiect
     public partial class start : Form
     {
         private string currentUsername; // Variabilă pentru a stoca numele de utilizator introdus temporar
-
+        private IMongoCollection<Cont> ContCollection;
+        private MongoClient client;
         public start()
         {
             InitializeComponent();
@@ -15,7 +20,26 @@ namespace proiect
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Aici puteți adăuga logica inițială la încărcarea formularului (dacă este necesar)
+            const string connectionUri = "mongodb+srv://cbotar82:I36rhl3i86onf6b5@cluster0.bguofu2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Send a ping to confirm a successful connection
+            var database = client.GetDatabase("Conturi"); // Replace "your_database_name" with your actual database name
+            ContCollection = database.GetCollection<Cont>("Cont");
+
+            // Send a ping to confirm a successful connection
+            try
+            {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void User_TextChanged(object sender, EventArgs e)
@@ -28,38 +52,7 @@ namespace proiect
             // Aici puteți adăuga logica pentru evenimentul text modificat pentru câmpul de parolă (dacă este necesar)
         }
 
-  
 
-        private bool CheckCredentials(string username, string password)
-        {
-            string filePath = "accounts.txt";
-
-            // Verificăm dacă fișierul există
-            if (!File.Exists(filePath))
-            {
-                MessageBox.Show("Fișierul cu conturi nu există!");
-                return false;
-            }
-
-            // Citim fișierul pentru a verifica credențialele
-            string[] lines = File.ReadAllLines(filePath);
-            foreach (string line in lines)
-            {
-                string[] parts = line.Split(',');
-                string storedUsername = parts[0];
-                string storedPassword = parts[1];
-
-                // Verificăm dacă numele de utilizator și parola introduse corespund cu cele din fișier
-                if (username == storedUsername && password == storedPassword)
-                {
-                    return true;
-                }
-            }
-
-            return false; // Autentificare eșuată
-        }
-
- 
 
         private void start_Load(object sender, EventArgs e)
         {
@@ -75,30 +68,43 @@ namespace proiect
 
             // Arată fereastra Signup
             signupForm.Show();
-        }   
+        }
 
         private void loginimg_Click(object sender, EventArgs e)
         {
             string username = User.Text;
             string password = Parola.Text;
 
-            if (CheckCredentials(username, password))
+            // Validate input
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                // Salvăm numele de utilizator introdus
+                MessageBox.Show("Please enter username and password.");
+                return;
+            }
+
+            // Query MongoDB collection to find a document with the provided username and password
+            var filter = Builders<Cont>.Filter.Eq("Username", username) & Builders<Cont>.Filter.Eq("Password", password);
+
+            // Execute the query
+            var result = ContCollection.Find(filter).FirstOrDefault();
+
+            // Check if a matching document was found
+            if (result != null)
+            {
+                MessageBox.Show("Login successful!");
+
+                // Save the username
                 currentUsername = username;
 
-                // Închideți Form1
                 this.Hide();
-
-                // Deschideți Form2
-                joc form2 = new joc();
-                form2.ShowDialog(); // Afișați Form2 ca un dialog modal
-
+                joc jocForm = new joc(currentUsername);
+                jocForm.Show();
             }
             else
             {
-                MessageBox.Show("Numele de utilizator sau parola incorecte!");
+                MessageBox.Show("Invalid username or password.");
             }
         }
+
     }
 }

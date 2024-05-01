@@ -1,21 +1,30 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
-using System.Xml.Linq;
+using MongoDB.Driver;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using Raven.Database.Plugins.Builtins.Monitoring.Snmp.Objects.Database.Statistics;
+using System.ComponentModel.Composition.Primitives;
+using MongoDB.Bson;
 
 namespace proiect
 {
     public partial class signup : Form
     {
+        private IMongoCollection<Cont> ContCollection;
+
+
         public signup()
         {
+
             InitializeComponent();
         }
 
-        //DBAccess objDBAccess = new DBAccess();
-       
 
         private void username_TextChanged(object sender, EventArgs e)
         {
@@ -34,9 +43,27 @@ namespace proiect
 
         private void signup_Load(object sender, EventArgs e)
         {
-            // Aici puteți adăuga logica pentru încărcarea formularului (dacă este necesar)
-        }
+            const string connectionUri = "mongodb+srv://cbotar82:I36rhl3i86onf6b5@cluster0.bguofu2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Send a ping to confirm a successful connection
+            var database = client.GetDatabase("Conturi"); // Replace "your_database_name" with your actual database name
+            ContCollection = database.GetCollection<Cont>("Cont");
 
+            // Send a ping to confirm a successful connection
+            try
+            {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -44,56 +71,35 @@ namespace proiect
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string usernameValue = password.Text;
-            string passwordValue = username.Text;
+            string usernameValue = username.Text;
+            string passwordValue = password.Text;
             string emailValue = email.Text;
 
-            // Validare dacă câmpurile sunt completate
+            // Validation: Check if all fields are completed
             if (string.IsNullOrWhiteSpace(usernameValue) || string.IsNullOrWhiteSpace(passwordValue) || string.IsNullOrWhiteSpace(emailValue))
             {
-                MessageBox.Show("Please fill in all fields!");
+                MessageBox.Show("Please complete all fields!");
                 return;
             }
-            else
+
+            // Create a new Cont object
+            var cont = new Cont
             {
-               
-                SqlCommand insertCommand = new SqlCommand("insert into Cont(Username,Password,Email) values (@usernameValue, @passwordValue, @emailValue)");
-                insertCommand.Parameters.AddWithValue("@usernameValue", usernameValue);
-                insertCommand.Parameters.AddWithValue("@passwordValue", passwordValue);
-                insertCommand.Parameters.AddWithValue("@emailValue", emailValue);
+                Username = usernameValue,
+                Password = passwordValue,
+                Email = emailValue,
+                Score=0,
+                Level1=0,
+                Level2=0,
+                Level3=0
+            };
 
-                //int row = objDBAccess.executeQuery(insertCommand);
-                //if (row == 1)
-                //{
-                //   MessageBox.Show("Account created successfully!");
-                //  objDBAccess.closeConn();
-                //    this.Hide();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Error!");
-                //}
-                
-            }
+            // Insert the Cont object into MongoDB
+            ContCollection.InsertOne(cont);
 
-            // Salvare date în fișierul accounts.txt
-            //string filePath = "accounts.txt";
-            //try
-            //{
-            //  using (StreamWriter writer = File.AppendText(filePath))
-            //{
-            //  writer.WriteLine($"{passwordValue},{usernameValue},{emailValue}");
-
-            //}
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Eroare la salvarea datelor: {ex.Message}");
-            //}
-         ;
-
-
+            MessageBox.Show("User registered successfully!");
 
         }
+
     }
 }

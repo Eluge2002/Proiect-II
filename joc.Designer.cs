@@ -36,6 +36,8 @@
             this.nivel1 = new System.Windows.Forms.PictureBox();
             this.nivel2 = new System.Windows.Forms.PictureBox();
             this.nivel3 = new System.Windows.Forms.PictureBox();
+            this.score = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
@@ -43,6 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nivel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // start
@@ -134,6 +137,25 @@
             this.nivel3.Visible = false;
             this.nivel3.Click += new System.EventHandler(this.nivel3_Click);
             // 
+            // score
+            // 
+            this.score.BackColor = System.Drawing.Color.MediumPurple;
+            this.score.Location = new System.Drawing.Point(40, 277);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(165, 22);
+            this.score.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(69, 221);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // joc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,6 +163,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.score);
             this.Controls.Add(this.nivel3);
             this.Controls.Add(this.nivel2);
             this.Controls.Add(this.nivel1);
@@ -159,7 +183,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nivel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -172,5 +198,7 @@
         private System.Windows.Forms.PictureBox nivel1;
         private System.Windows.Forms.PictureBox nivel2;
         private System.Windows.Forms.PictureBox nivel3;
+        private System.Windows.Forms.TextBox score;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
