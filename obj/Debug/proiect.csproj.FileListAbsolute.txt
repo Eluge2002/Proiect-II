@@ -94,3 +94,23 @@ D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.pdb
 D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.exe.config
 D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.exe
 D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.pdb
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Interop.MediaPlayer.dll
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Interop.WMLSS.dll
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Interop.WMPDXMLib.dll
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Interop.WMPLauncher.dll
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Interop.WMPLib.dll
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.exe
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.pdb
+D:\facultate++\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.exe.config
+D:\facultate++\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.exe
+D:\facultate++\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.pdb
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Level1.resources
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\Level_2.Level2.resources
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.start.resources
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.joc.resources
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Level3.resources
