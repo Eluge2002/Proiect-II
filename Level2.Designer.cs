@@ -66,6 +66,7 @@ namespace Level_2
             // 
             this.MoveTimer.Enabled = true;
             this.MoveTimer.Interval = 10;
+            //this.MoveTimer.Tick += new System.EventHandler(this.MoveTimer_Tick);
             // 
             // Player
             // 
@@ -117,12 +118,11 @@ namespace Level_2
             // 
             // Box
             // 
-            this.Box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Box.Image = ((System.Drawing.Image)(resources.GetObject("Box.Image")));
-            this.Box.Location = new System.Drawing.Point(272, 226);
+            this.Box.Location = new System.Drawing.Point(281, 226);
             this.Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Box.Name = "Box";
-            this.Box.Size = new System.Drawing.Size(91, 50);
+            this.Box.Size = new System.Drawing.Size(108, 50);
             this.Box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Box.TabIndex = 1;
             this.Box.TabStop = false;

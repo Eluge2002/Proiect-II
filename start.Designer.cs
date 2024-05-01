@@ -112,7 +112,7 @@
             this.signupimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.signupimg.Location = new System.Drawing.Point(195, 359);
             this.signupimg.Name = "signupimg";
-            this.signupimg.Size = new System.Drawing.Size(71, 32);
+            this.signupimg.Size = new System.Drawing.Size(73, 34);
             this.signupimg.TabIndex = 8;
             this.signupimg.TabStop = false;
             this.signupimg.Click += new System.EventHandler(this.signupimg_Click);

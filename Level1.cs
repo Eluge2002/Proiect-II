@@ -47,14 +47,13 @@ namespace proiect
             gameMedia = new WindowsMediaPlayer();
             shootgMedia = new WindowsMediaPlayer();
             Controls.Add(Player);
+            
         }
 
         private void Level1_Load(object sender, EventArgs e)
         {
 
-            gameMedia = new WindowsMediaPlayer();
-            shootgMedia = new WindowsMediaPlayer();
-            explosion = new WindowsMediaPlayer();
+            
             pause = false;
             gameISOVER = false;
             score = 0;
@@ -67,9 +66,9 @@ namespace proiect
             timerMoveMunition.Start();
             timerMoveEnem.Start();
 
-            enemiesSpeed = 2;
+            enemiesSpeed = 3;
             MunitionSpeed = 15;
-            enemiesMunitionSpeed = 2;
+            enemiesMunitionSpeed = 5;
 
 
             munitions = new PictureBox[3];
@@ -84,7 +83,7 @@ namespace proiect
                 Controls.Add(munitions[i]);
             }
 
-            enemies = new PictureBox[8];
+            enemies = new PictureBox[7];
             for (int j = 0; j < enemies.Length; j++)
             {
                 enemies[j] = new PictureBox();
@@ -93,7 +92,7 @@ namespace proiect
                 enemies[j].BorderStyle = BorderStyle.None;
                 enemies[j].Visible = false;
                 Controls.Add(enemies[j]);
-                enemies[j].Location = new Point((j + 1) * 50, -50);
+                enemies[j].Location = new Point((j + 1) * 60,-75);
             }
             // Set enemy images
             enemies[0].Image = Image.FromFile("Boss1.png");
@@ -102,18 +101,17 @@ namespace proiect
             enemies[3].Image = Image.FromFile("E3.png");
             enemies[4].Image = Image.FromFile("E1.png");
             enemies[5].Image = Image.FromFile("E3.png");
-            enemies[6].Image = Image.FromFile("E2.png");
-            enemies[7].Image = Image.FromFile("Boss2.png");
+            enemies[6].Image = Image.FromFile("Boss2.png");
             //
             rnd = new Random();
-            enemiesMunition = new PictureBox[8];
+            enemiesMunition = new PictureBox[7];
             for (int j = 0; j < enemiesMunition.Length; j++)
             {
                 enemiesMunition[j] = new PictureBox();
                 enemiesMunition[j].Size = new Size(2, 25);
                 enemiesMunition[j].Visible = false;
                 enemiesMunition[j].BackColor = Color.Yellow;
-                int x = rnd.Next(0,8);
+                int x = rnd.Next(0,7);
 
                 enemiesMunition[j].Location = new Point(enemies[x].Location.X, enemies[x].Location.Y-20);
                 Controls.Add(enemiesMunition[j]);
@@ -167,7 +165,7 @@ namespace proiect
                     stars[i].Top = -stars[i].Height;
                 }
             }
-            for (int i = stars.Length / 2; i < stars.Length; i++)
+            for (int i = stars.Length/2; i<stars.Length; i++)
             {
                 stars[i].Top += backgroundspeed - 2;
                 if (stars[i].Top >= this.Height)
@@ -179,7 +177,7 @@ namespace proiect
 
         private void timerLeftMove_Tick(object sender, EventArgs e)
         {
-            if (Player.Left > 10)
+            if (Player.Left>10)
             {
                 Player.Left -= playerSpeed;
             }
@@ -203,7 +201,7 @@ namespace proiect
 
         private void timerDownMove_Tick(object sender, EventArgs e)
         {
-            if (Player.Top < 500)
+            if (Player.Bottom+playerSpeed<=this.ClientSize.Height)
             {
                 Player.Top += playerSpeed;
             }
@@ -252,7 +250,9 @@ namespace proiect
                     }
                     else
                     {
-                        labelState.Location = new Point(this.Width / 2 - 120, 150);
+                        int x = (this.ClientSize.Width-labelState.Width)/2;
+                        int y = (this.ClientSize.Height-labelState.Height)/2;
+                        labelState.Location = new Point(x, y);
                         labelState.Text = "PAUSED";
                         labelState.Visible = true;
                         gameMedia.controls.pause();
@@ -294,9 +294,6 @@ namespace proiect
                 array[i].Visible = true;
                 array[i].Top += speed;
 
-             
-                
-
                 if (array[i].Top > this.Height)
                     array[i].Location = new Point((i + 1) * 50, -200);
             }
@@ -308,6 +305,7 @@ namespace proiect
             timerMoveEnem.Stop();
             timerMoveMunition.Stop();
             timerMoveEnemMun.Stop();
+            timerMove.Stop();
             timerMove.Stop();
         }
         private void StartTimers()
@@ -324,16 +322,16 @@ namespace proiect
 
             for (int i = 0; i < enemiesMunition.Length; i++)
             {
-                if (enemiesMunition[i].Top < this.Height)
+                if (enemiesMunition[i].Top<this.Height)
                 {
-                    enemiesMunition[i].Visible = true;
+                    enemiesMunition[i].Visible=true;
                     enemiesMunition[i].Top += enemiesMunitionSpeed;
 
                 }
                 else
                 {
                     enemiesMunition[i].Visible = false;
-                    int x = rnd.Next(0, 10);
+                    int x = rnd.Next(0,7);
 
                     enemiesMunition[i].Location = new Point(enemies[x].Location.X + 20, enemies[x].Location.Y + 30);
                 }
@@ -342,9 +340,9 @@ namespace proiect
         }
         public void Collision()
         {
-            for (int i = 0; i < enemies.Length; i++)
+            for (int i=0;i<enemies.Length; i++)
             {
-                for (int j = 0; j < munitions.Length; j++)
+                for (int j=0;j<munitions.Length; j++)
                 {
                     if (munitions[j].Bounds.IntersectsWith(enemies[i].Bounds))
                     {
@@ -362,7 +360,9 @@ namespace proiect
         public void GameOver(String str)
         {
             labelState.Text = str;
-            labelState.Location = new Point(220, 20);
+            int x = (this.ClientSize.Width-labelState.Width)/2;
+            int y = (this.ClientSize.Height-labelState.Height)/2;
+            labelState.Location = new Point(x, y);
             labelState.Visible = true;
             replayBtn.Visible = true;
             exit.Visible = true;
@@ -376,45 +376,60 @@ namespace proiect
             {
                 for (int i = 0; i < enemiesMunition.Length; i++)
                 {
-                    
-                    if (enemiesMunition[i].Bounds.IntersectsWith(Player.Bounds))
+                    // Calculăm centrul muniției inamicului
+                    Point munitionCenter = new Point(
+                        enemiesMunition[i].Bounds.X + enemiesMunition[i].Bounds.Width/2,
+                         enemiesMunition[i].Bounds.Y + enemiesMunition[i].Bounds.Height/2
+                    );
+
+                    // Calculăm centrul jucătorului
+                    Point playerCenter = new Point(
+                        Player.Bounds.X + Player.Bounds.Width/2,
+                        Player.Bounds.Y + Player.Bounds.Height/2
+                    );
+
+
+                    double distance = Math.Sqrt(Math.Pow(munitionCenter.X - playerCenter.X, 2) + Math.Pow(munitionCenter.Y - playerCenter.Y, 2));
+                    double distantaMinimaPentruColiziune = 16.0;
+
+                    if (distance < distantaMinimaPentruColiziune)
                     {
-                        
+
+                        enemiesMunition[i].Visible = false;
                         explosion.settings.volume = 30;
                         explosion.controls.play();
                         Player.Visible = false;
                         GameOver("GAME OVER");
                     }
 
-                    
-                    enemiesMunition[i].Visible = true;
-                    enemiesMunition[i].Top += enemiesMunitionSpeed;
-                    if (enemiesMunition[i].Top >= this.Height)
-                    {
-                        int x = rnd.Next(0, 8);
-                        enemiesMunition[i].Location = new Point(enemies[x].Location.X + 20, enemies[x].Location.Y + 30);
-                    }
                 }
+                timerMoveEnemMun.Start();
             }
         }
 
         private void timerBg_Tick(object sender, EventArgs e)
         {
             gameTimeInSeconds++;
-            time.Text = $"{gameTimeInSeconds / 60:D2}:{gameTimeInSeconds % 60:D2}";
+            time.Text = $"{gameTimeInSeconds/60:D2}:{gameTimeInSeconds%60:D2}";
         }
 
         private void replayBtn_Click(object sender, EventArgs e)
         {
+           
             this.Controls.Clear();
-            InitializeComponent();
-            this.ClientSize = new Size(700, 530);
-            Level1_Load(e, e);
+            this.Hide();
+            Level1 level1 = new Level1();
+            level1.Show();
+            
+
+
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            joc menu= new joc();
+            menu.Show();
+            this.Close();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace proiect
 
         private void Level1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Level1 level1= new Level1();
             level1.Show();
         }
@@ -63,9 +64,7 @@ namespace proiect
 
         private void nivel3_Click(object sender, EventArgs e)
         {
-            Level3 level = new Level3();
-            level.Show();
-            this.Hide();
+            
         }
 
       

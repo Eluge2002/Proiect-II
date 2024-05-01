@@ -1,4 +1,5 @@
 ﻿using Level_2;
+using proiect;
 using System;
 using System.Drawing;
 using System.Resources;
@@ -31,9 +32,6 @@ namespace Level_2
         public Level2()
         {
             InitializeComponent();
-            
-
-
             Controls.Add(Player);
         }
 
@@ -57,7 +55,7 @@ namespace Level_2
 
             enemSpeed = 4;
             munitionsSpeed = 15;
-            enemMuntionSpeed = 4;
+            enemMuntionSpeed = 5;
 
 
             munitions = new PictureBox[3];
@@ -122,8 +120,8 @@ namespace Level_2
         }
 
 
-            public void MoveEnem(PictureBox[] array, int speed)
-            {
+        public void MoveEnem(PictureBox[] array, int speed)
+        {
             for (int i = 0; i < array.Length; i++)
             {
                 array[i].Visible = true;
@@ -156,14 +154,16 @@ namespace Level_2
                         scorelb1.Text = (score < 20) ? "0" + score.ToString() : score.ToString();
                         enemies[i].Location = new Point((i + 1) * 50, -100);
                         munitions[j].Visible = false;
+                        enemMuntion[i].Visible = false; 
                     }
                     if (munitions[j].Bounds.IntersectsWith(Box.Bounds))
                     {
                         // Muniția dispare când lovește cutia, dar nu este distrusă complet
                         munitions[j].Visible = false;
                         // Repozitionează muniția în afara ecranului
-                        munitions[j].Location = new Point(-100, -100); // sau orice altă poziție în afara ecranului
+                        munitions[j].Location = new Point(-100, -100);// sau orice altă poziție în afara ecranului
                     }
+                   
                 }
             }
         }
@@ -172,7 +172,9 @@ namespace Level_2
         public void GameOver(String str)
         {
             label1.Text = str;
-            label1.Location = new Point(220, 20);
+            int x = (this.ClientSize.Width-label1.Width)/2;
+            int y = (this.ClientSize.Height-label1.Height)/2;
+            label1.Location = new Point(x,y+50);
             label1.Visible = true;
             replayBtn.Visible = true;
             exitBtn.Visible = true;
@@ -203,7 +205,7 @@ namespace Level_2
         {
             if (!pause && !gameIsOver)
             {
-                for (int i = 0; i < enemMuntion.Length; i++)
+                for (int i = 0; i<enemMuntion.Length; i++)
                 {
                     // Calculăm centrul muniției inamicului
                     Point munitionCenter = new Point(
@@ -218,16 +220,15 @@ namespace Level_2
                     );
 
 
-                    double distance = Math.Sqrt(Math.Pow(munitionCenter.X - playerCenter.X, 2) + Math.Pow(munitionCenter.Y - playerCenter.Y, 2));
-                    double distantaMinimaPentruColiziune = 10.0;
+                    double distance=Math.Sqrt(Math.Pow(munitionCenter.X-playerCenter.X, 2)+Math.Pow(munitionCenter.Y - playerCenter.Y, 2));
+                    double distantaMinimaPentruColiziune = 16.0;
 
-                    if (distance < distantaMinimaPentruColiziune)
+                    if (distance<distantaMinimaPentruColiziune)
                     {
-
-                        enemMuntion[i].Visible = false;
                         explosion.settings.volume = 30;
                         explosion.controls.play();
                         Player.Visible = false;
+                        enemMuntion[i].Visible = false;
                         GameOver("GAME OVER");
                     }
 
@@ -296,43 +297,78 @@ namespace Level_2
         {
 
             this.Controls.Clear();
-
-            InitializeComponent();
-            this.ClientSize = new Size(700, 530);
-            Level2_Load_1(e, e);
+            this.Hide();
+            Level2 level2 = new Level2();   
+            level2.Show();
 
         }
        
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            joc menu = new joc();
+            menu.Show();
+            this.Close();
         }
 
         private void RightMove_Tick_1(object sender, EventArgs e)
         {
+            if (Player.Right < 530) 
+            {
+                Player.Left += playerSpeed; 
 
-            if (Player.Right < 580)
-                Player.Left += playerSpeed;
+             
+                if (Player.Bounds.IntersectsWith(Box.Bounds))
+                {
+                   
+                    Player.Left = Box.Left - Player.Width;
+                }
+            }
         }
 
         private void LeftMove_Tick_1(object sender, EventArgs e)
         {
-            if (Player.Left > 10)
-                Player.Left -= playerSpeed;
+            if (Player.Left > 10) 
+            {
+                Player.Left -= playerSpeed; 
+
+              
+                if (Player.Bounds.IntersectsWith(Box.Bounds))
+                {
+                   
+                    Player.Left = Box.Right;
+                }
+            }
         }
 
         private void DownMove_Tick_1(object sender, EventArgs e)
         {
-            if (Player.Top < 500)
-                Player.Top += playerSpeed;
+            if (Player.Bottom + playerSpeed <= this.ClientSize.Height) 
+            {
+                Player.Top += playerSpeed; 
+
+               
+                if (Player.Bounds.IntersectsWith(Box.Bounds))
+                {
+                    
+                    Player.Top = Box.Top - Player.Height;
+                }
+            }
         }
 
         private void UpMove_Tick_1(object sender, EventArgs e)
         {
-            if (Player.Top > 10)
-                Player.Top -= playerSpeed;
-        }
+            if (Player.Top > 10) 
+            {
+                Player.Top -= playerSpeed; 
 
+               
+                if (Player.Bounds.IntersectsWith(Box.Bounds))
+                {
+                    
+                    Player.Top = Box.Bottom;
+                }
+            }
+        }
         private void timerGame_Tick(object sender, EventArgs e)
         {
             gameTimeInSeconds++;

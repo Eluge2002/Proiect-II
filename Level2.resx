@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MoveTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>345, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MoveTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>345, 17</value>
+  </data>
   <data name="Player.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAb
@@ -161,27 +161,27 @@
         Scs9Ho/H4/F4PB6PJ0vk5f0HFo84S6dDBT0AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="RightMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="RightMove.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>480, 17</value>
-  </metadata>
-  <metadata name="LeftMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="LeftMove.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>612, 17</value>
-  </metadata>
-  <metadata name="DownMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="DownMove.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>734, 17</value>
-  </metadata>
-  <metadata name="UpMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="UpMove.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>870, 17</value>
-  </metadata>
-  <metadata name="MoveMunitionTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="MoveMunitionTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>986, 17</value>
-  </metadata>
-  <metadata name="MoveEnemTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="MoveEnemTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>1180, 17</value>
-  </metadata>
-  <metadata name="EnemMunTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="EnemMunTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 58</value>
-  </metadata>
+  </data>
   <data name="Box.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxEQEhUSExEVFhIVFhUXFxcVGBgVFRUVFhYXFxcVFRYY
@@ -370,12 +370,12 @@
         CAEAIAQAgBACAEAIAQAgBACAEAIAQH//2Q==
 </value>
   </data>
-  <metadata name="timerGamer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="timerGamer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>169, 15</value>
-  </metadata>
-  <metadata name="timerGame.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timerGame.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIAD2TwAAlgAAAICAAAABACAAKAgBAIxQAABgYAAAAQAgAKiUAAC0WAEASEgAAAEA
@@ -3420,4 +3420,7 @@
         wAMAAPAPAAA=
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+ 
+
 </root>
