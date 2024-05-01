@@ -134,13 +134,91 @@ D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.Properties.Re
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
 D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.signup.resources
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.MediaPlayer.dll
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMLSS.dll
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPDXMLib.dll
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPLauncher.dll
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\Interop.WMPLib.dll
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.csproj.ResolveComReference.cache
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.exe
-D:\Downloads\Proiect-II-main (1)\Proiect-II-main\obj\Debug\proiect.pdb
-D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.signup.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+F:\facultate\Proiect-II-main\obj\Debug\Interop.MediaPlayer.dll
+F:\facultate\Proiect-II-main\obj\Debug\Interop.WMLSS.dll
+F:\facultate\Proiect-II-main\obj\Debug\Interop.WMPDXMLib.dll
+F:\facultate\Proiect-II-main\obj\Debug\Interop.WMPLauncher.dll
+F:\facultate\Proiect-II-main\obj\Debug\Interop.WMPLib.dll
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.ResolveComReference.cache
+F:\facultate\Proiect-II-main\obj\Debug\proiect.Level1.resources
+F:\facultate\Proiect-II-main\obj\Debug\Level_2.Level2.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.signup.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.start.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.joc.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.Properties.Resources.resources
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+F:\facultate\Proiect-II-main\obj\Debug\proiect.exe
+F:\facultate\Proiect-II-main\obj\Debug\proiect.pdb
+F:\facultate\Proiect-II-main\bin\Debug\mongocrypt.dll
+F:\facultate\Proiect-II-main\bin\Debug\packages\RavenDB.Database.3.5.9\tools\Raven.Studio.Html5.zip
+F:\facultate\Proiect-II-main\bin\Debug\proiect.exe.config
+F:\facultate\Proiect-II-main\bin\Debug\proiect.exe
+F:\facultate\Proiect-II-main\bin\Debug\proiect.pdb
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.Core.dll
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.SecurityToken.dll
+F:\facultate\Proiect-II-main\bin\Debug\DnsClient.dll
+F:\facultate\Proiect-II-main\bin\Debug\Lambda2Js.Signed.dll
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Bcl.HashCode.dll
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Bson.dll
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.Core.dll
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.dll
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.GridFS.dll
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Libmongocrypt.dll
+F:\facultate\Proiect-II-main\bin\Debug\Newtonsoft.Json.dll
+F:\facultate\Proiect-II-main\bin\Debug\Nito.AsyncEx.Coordination.dll
+F:\facultate\Proiect-II-main\bin\Debug\Nito.AsyncEx.Tasks.dll
+F:\facultate\Proiect-II-main\bin\Debug\Nito.Collections.Deque.dll
+F:\facultate\Proiect-II-main\bin\Debug\Nito.Disposables.dll
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Abstractions.dll
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Client.Lightweight.dll
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Database.dll
+F:\facultate\Proiect-II-main\bin\Debug\SharpCompress.dll
+F:\facultate\Proiect-II-main\bin\Debug\Snappier.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Collections.Immutable.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Security.AccessControl.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Text.Encoding.CodePages.dll
+F:\facultate\Proiect-II-main\bin\Debug\ZstdSharp.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Buffers.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Memory.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\facultate\Proiect-II-main\bin\Debug\System.Numerics.Vectors.dll
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.Core.pdb
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.Core.xml
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.SecurityToken.pdb
+F:\facultate\Proiect-II-main\bin\Debug\AWSSDK.SecurityToken.xml
+F:\facultate\Proiect-II-main\bin\Debug\DnsClient.xml
+F:\facultate\Proiect-II-main\bin\Debug\Lambda2Js.Signed.xml
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.AspNetCore.JsonPatch.xml
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Bcl.HashCode.xml
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\facultate\Proiect-II-main\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Bson.xml
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.xml
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.Core.xml
+F:\facultate\Proiect-II-main\bin\Debug\MongoDB.Driver.GridFS.xml
+F:\facultate\Proiect-II-main\bin\Debug\Newtonsoft.Json.xml
+F:\facultate\Proiect-II-main\bin\Debug\Nito.AsyncEx.Coordination.xml
+F:\facultate\Proiect-II-main\bin\Debug\Nito.AsyncEx.Tasks.xml
+F:\facultate\Proiect-II-main\bin\Debug\Nito.Collections.Deque.xml
+F:\facultate\Proiect-II-main\bin\Debug\Nito.Disposables.xml
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Abstractions.pdb
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Abstractions.xml
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Client.Lightweight.pdb
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Client.Lightweight.xml
+F:\facultate\Proiect-II-main\bin\Debug\Raven.Database.pdb
+F:\facultate\Proiect-II-main\bin\Debug\Snappier.xml
+F:\facultate\Proiect-II-main\bin\Debug\System.Collections.Immutable.xml
+F:\facultate\Proiect-II-main\bin\Debug\System.Security.AccessControl.xml
+F:\facultate\Proiect-II-main\bin\Debug\System.Text.Encoding.CodePages.xml
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.SuggestedBindingRedirects.cache
+F:\facultate\Proiect-II-main\obj\Debug\proiect.exe.config
+F:\facultate\Proiect-II-main\obj\Debug\proiect.csproj.Up2Date
+F:\facultate\Proiect-II-main\obj\Debug\proiect.Level3.resources
