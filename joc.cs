@@ -64,7 +64,9 @@ namespace proiect
 
         private void nivel3_Click(object sender, EventArgs e)
         {
-            
+             this.Hide();
+ Level3 level = new Level3();
+ level.Show();
         }
 
       
