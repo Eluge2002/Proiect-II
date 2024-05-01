@@ -1,0 +1,202 @@
+﻿body {
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #FFF7F8;
+  background-color: #A9F0D1;
+}
+
+h2, h3 {
+  text-shadow: 0 0 10px #58fff4; /* Text glow effect */
+  color: #08B2E3; /* Initial text color */
+  text-align: justify; /* Center the headings to the left side */
+}
+h1 {
+  text-shadow: 0 0 10px #58fff4; /* Text glow effect */
+  color: #08B2E3; /* Initial text color */
+}
+
+/* Flexbox styles for the navigation bar */
+.fixed-side-navbar {
+  background-color: #08B2E3;
+  color: #CCD7C5;
+  padding: 10px 0;
+  border-radius: 30px; /* Rounded edges */
+  box-shadow: 0 0 50px #A9F0D1; /* Box shadow for glossy effect */
+}
+
+.fixed-side-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.fixed-side-navbar li {
+  margin-right: 20px;
+}
+
+.fixed-side-navbar li:last-child {
+  margin-right: 0;
+}
+
+.fixed-side-navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px; /* Rounded edges for each menu item */
+  text-shadow: 0 0 10px #020887; /* Text glow effect */
+  color: #F3F8F2;
+}
+
+.fixed-side-navbar a:hover {
+  background: linear-gradient(145deg, #08B2E3, #020887); /* Gradient for glossy hover effect */
+  box-shadow: 0 0 10px #2a1e5c; /* Box shadow for glossy hover effect */
+  font-family: 'Courier New', monospace;
+  animation: glowAnimation 1s infinite alternate; /* Animation for glow effect */
+}
+
+@keyframes glowAnimation {
+  from {
+    color: #5b369a;
+    text-shadow: 0 0 10px #08B2E3;
+  }
+  to {
+    color: #F1E3F3;
+    text-shadow: 0 0 20px #F3F8F2, 0 0 30px #F3F8F2, 0 0 40px #F3F8F2; 
+  }
+}
+
+#home, #services, #doctors, #about {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+}
+
+#home {
+  background-image: url('imagini/hospital.jpg');
+  background-size:auto  100%  ; /* Extend the image from top to bottom while maintaining aspect ratio */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(169, 240, 209, 0.1);
+}
+.home-text {
+  width: 50%; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  font-size: 18px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Adjust the line height as needed */
+  padding: 25px; /* Add padding around the text for better readability */
+  border: 3px solid #0b9be3; /* Optional: Add a border for visual separation */
+  font-family: 'Courier New', monospace;
+  background-color: rgba(14, 194, 225, 0.633);
+  transition: box-shadow 0.5s; /* Add a smooth transition for the glow effect */
+}
+
+.home-text:hover {
+  box-shadow: 0 0 30px rgba(2, 140, 195, 0.7); /* Change the values as needed */
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
+
+
+#services {
+  background-image: url('imagini/services.jpg');
+  background-size:auto  100%  ; /* Extend the image from top to bottom while maintaining aspect ratio */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(169, 240, 209, 0.1);
+}
+ul li {
+  color: #0056b3; /* Change the color code to your desired font color */
+}
+
+#doctors {
+  background-image: url('imagini/doctors.jpg');
+  background-size:auto  100%  ; /* Extend the image from top to bottom while maintaining aspect ratio */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(169, 240, 209, 0.1);
+}
+
+#about {
+  background-image: url('imagini/about.jpg');
+  background-size:auto  100%  ; /* Extend the image from top to bottom while maintaining aspect ratio */
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(169, 240, 209, 0.1);
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+  color:#020887
+}
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3d07e0;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.download-button:hover {
+  background-color: #45a049;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+    .fullscreen-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.first-ten {
+    background-color: #d3d0ea; /* o nuanță mai deschisă de mov */
+}

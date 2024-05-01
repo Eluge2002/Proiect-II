@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Prime Target</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/templatemo-main.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+    <body>
+        <audio id="background-audio" loop>
+            <source src="img/music.mp3" type="audio/mpeg">
+        </audio>
+        <div class="fixed-side-navbar">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#signup"><span>SignUp</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#ranking"><span>Ranking</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio"><span>About</span></a></li>
+
+            </ul>
+        </div>
+
+        <div class="parallax-content baner-content" id="home">
+            <div class="container">
+                <div class="first-content">
+                    <h1><font color="#BFCFE7">Prime</font></h1>
+                    <span><em><font color="#BFCFE7">Target</font></em> </span>
+                    <div class="primary-button">
+                        <a href="#signup" onclick="playAudio()">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="service-content" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="left-text">
+                            <h4>Create Account</h4>
+                            <div class="line-dec"></div>
+                            <ul>
+                                <li>Create an account to appear in the ranking.</li>
+
+                            </ul>
+                            <div class="primary-button">
+                                <a href="https://github.com/Eluge2002/proiect-II/tree/main">Download</a>
+                            </div>
+                            <div class="primary-button">
+                                <a href="#ranking">Ranking</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <h4>Sign Up</h4>
+                                    <div class="line-dec"></div>
+                                    <div id="form-container">
+                                        <form action="save_account.php" method="post">
+                                            <div class="form-group">
+                                                <label for="username">Username:</label>
+                                                <input type="text" id="username" name="username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password:</label>
+                                                <input type="password" id="password" name="password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+                                            <button type="submit">Create Account</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-content" id="ranking">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="left-text">
+                            <h4>Ranking</h4>
+                            <div class="line-dec"></div>
+
+                            <ul>
+                                <li>First 50 players </li>
+
+                            </ul>
+                            <div class="primary-button">
+                                <a href="#portfolio">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <h4>Sign Up</h4>
+                                    <div class="line-dec"></div>
+                                    <div id="form-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Rank &nbsp &nbsp &nbsp</th>
+                                                    <th>Username &nbsp &nbsp &nbsp</th>
+                                                    <th>Score &nbsp &nbsp &nbsp</th>
+                                                    <th>Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="first-ten">
+                                                    <td>1</td>
+                                                    <td>username1</td>
+                                                    <td>score1</td>
+                                                    <td>time1</td>
+                                                </tr>
+                                                <tr class="first-ten">
+                                                    <td>2</td>
+                                                    <td>username2</td>
+                                                    <td>score2</td>
+                                                    <td>time2</td>
+                                                </tr>
+                                                <!-- Adaugă mai multe rânduri aici pentru fiecare înregistrare -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="parallax-content projects-content" id="portfolio">
+            <div class="container">
+                <h1><font size="33" color="cyan">About</font></h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="owl-testimonials" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Drincă Robert Ioan</h4>
+                                        <p>Role: Team Leader</p>
+                                        <ul>
+                                            <li>Game menu</li>
+                                            <li>3rd level of the game</li>
+                                            <li>Website</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/2nd-big-item.jpg" data-lightbox="image-1"><img src="img/2nd-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Botar Carla Maria</h4>
+                                        <p>Role: Developer</p>
+                                        <p>Contribution</p>
+                                        <ul>
+                                            <li>Database</li>
+                                            <li>Connecting the database to the website and the application.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/3rd-big-item.jpg" data-lightbox="image-1"><img src="img/3rd-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Cândea Alina Gabriela</h4>
+                                        <p>Role: Developer</p>
+                                        <p>Contribution</p>
+                                        <ul>
+                                            <li>Levels 1 and 2 of the game</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/4th-big-item.jpg" data-lightbox="image-1"><img src="img/4th-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Popescu Paula Teodora</h4>
+                                        <p>Role: Tester</p>
+                                        <p>Contribution</p>
+                                        <ul>
+                                            <li>Helped with level 1 of the game</li>
+                                            <li>Tested the site and the application</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/5th-big-item.jpg" data-lightbox="image-1"><img src="img/5th-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Prime Target</h4>
+                                        <p>It was created for a college project in the Industrial Informatics subject.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="img/6th-big-item.jpg" data-lightbox="image-1"><img src="img/6th-item.jpg" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Story</h4>
+                                        <p>In the vast expanse of space, humanity faces its greatest threat yet - an alien armada known as the Xerions. As they sweep through the galaxy, leaving destruction in their wake, only one thing stands between them and the annihilation of Earth: the Prime Target Squadron. </p>
+                                        <p>At the helm of this elite squadron is Captain Alex Turner, a skilled pilot with nerves of steel and a heart of courage. With his trusty starfighter, the Phoenix, he leads the charge against the Xerion forces, engaging them in epic dogfights across the cosmos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="primary-button">
+                            <a href="#home">Pagina principala</a>
+                        </div>
+
+                        <p>
+                            Copyright &copy;
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(cityName).style.display = "block";
+            }
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                // Add smooth scrolling to all links
+                $(".fixed-side-navbar a, .primary-button a").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });
+        </script>
+        <script>
+            document.getElementById('save-btn').addEventListener('click', function () {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+
+                // Construiește textul datelor de salvat
+                var data = "Username: " + username + " | Password: " + password + " | Email: " + email + "\n";
+
+                // Creează un obiect de tip Blob cu datele
+                var blob = new Blob([data], { type: 'text/plain' });
+
+                // Creează un obiect URL pentru blob
+                var url = window.URL.createObjectURL(blob);
+
+                // Creează un element de tip a pentru a descărca fișierul
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'accounts.txt';
+
+                // Adaugă elementul a la body
+                document.body.appendChild(a);
+
+                // Simulează click pe link pentru a descărca fișierul
+                a.click();
+
+                // Șterge elementul a după ce a fost utilizat
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            });
+        </script>
+        <script>
+            var audio = document.getElementById('background-audio');
+            var findOutMoreButton = document.getElementById('find-out-more');
+
+            findOutMoreButton.addEventListener('click', function () {
+                playAudio();
+            });
+
+            function playAudio() {
+                audio.play();
+            }
+        </script>
+
+    </body>
+</html>
