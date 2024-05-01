@@ -114,3 +114,23 @@ D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Properties.Reso
 D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
 D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
 D:\facultate++\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Level3.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Interop.MediaPlayer.dll
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Interop.WMLSS.dll
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Interop.WMPDXMLib.dll
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Interop.WMPLauncher.dll
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Interop.WMPLib.dll
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.exe
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.pdb
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\bin\Debug\proiect.exe.config
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\bin\Debug\proiect.exe
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\bin\Debug\proiect.pdb
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.Level1.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\Level_2.Level2.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.start.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.joc.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.Properties.Resources.resources
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\Downloads\Proiect-II-main (4)\Proiect-II-main\obj\Debug\proiect.signup.resources

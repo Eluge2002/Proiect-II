@@ -60,7 +60,7 @@
             // settings
             // 
             this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settings.BackgroundImage")));
+            this.settings.BackgroundImage = global::proiect.Properties.Resources.Site;
             this.settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.settings.Location = new System.Drawing.Point(296, 303);
             this.settings.Name = "settings";

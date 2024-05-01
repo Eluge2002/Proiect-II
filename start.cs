@@ -71,7 +71,10 @@ namespace proiect
 
         private void signupimg_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("index.html");
+            signup signupForm = new signup();
+
+            // Arată fereastra Signup
+            signupForm.Show();
         }   
 
         private void loginimg_Click(object sender, EventArgs e)

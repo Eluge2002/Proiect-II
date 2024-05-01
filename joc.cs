@@ -23,7 +23,7 @@ namespace proiect
 
         private void settings_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("index.html");
         }
 
         private void start_Click(object sender, EventArgs e)

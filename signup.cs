@@ -14,7 +14,7 @@ namespace proiect
             InitializeComponent();
         }
 
-        DBAccess objDBAccess = new DBAccess();
+        //DBAccess objDBAccess = new DBAccess();
        
 
         private void username_TextChanged(object sender, EventArgs e)
@@ -62,17 +62,17 @@ namespace proiect
                 insertCommand.Parameters.AddWithValue("@passwordValue", passwordValue);
                 insertCommand.Parameters.AddWithValue("@emailValue", emailValue);
 
-                int row = objDBAccess.executeQuery(insertCommand);
-                if (row == 1)
-                {
-                    MessageBox.Show("Account created successfully!");
-                    objDBAccess.closeConn();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Error!");
-                }
+                //int row = objDBAccess.executeQuery(insertCommand);
+                //if (row == 1)
+                //{
+                //   MessageBox.Show("Account created successfully!");
+                //  objDBAccess.closeConn();
+                //    this.Hide();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Error!");
+                //}
                 
             }
 
