@@ -1,0 +1,96 @@
+D:\facultate++\sem2\ii_lab\proiect\bin\Debug\proiect.exe.config
+D:\facultate++\sem2\ii_lab\proiect\bin\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\proiect\bin\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.start.resources
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.joc.resources
+D:\facultate++\sem2\ii_lab\proiect\obj\Debug\proiect.signup.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.exe.config
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\bin\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.signup.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.start.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.joc.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\Proiect-II-main\Proiect-II-main\obj\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\Proiect-II-main\bin\Debug\proiect.exe.config
+D:\facultate++\sem2\ii_lab\Proiect-II-main\bin\Debug\proiect.exe
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.signup.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.start.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.joc.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\sem2\ii_lab\Proiect-II-main\bin\Debug\proiect.pdb
+D:\facultate++\sem2\ii_lab\Proiect-II-main\obj\Debug\proiect.level4.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\Proiect II\proiect-II\obj\Debug\Interop.MediaPlayer.dll
+D:\Proiect II\proiect-II\obj\Debug\Interop.WMLSS.dll
+D:\Proiect II\proiect-II\obj\Debug\Interop.WMPDXMLib.dll
+D:\Proiect II\proiect-II\obj\Debug\Interop.WMPLauncher.dll
+D:\Proiect II\proiect-II\obj\Debug\Interop.WMPLib.dll
+D:\Proiect II\proiect-II\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\Proiect II\proiect-II\obj\Debug\Level_2.Level2.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.signup.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.start.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.joc.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.Properties.Resources.resources
+D:\Proiect II\proiect-II\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\Proiect II\proiect-II\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\Proiect II\proiect-II\bin\Debug\proiect.exe.config
+D:\Proiect II\proiect-II\bin\Debug\proiect.exe
+D:\Proiect II\proiect-II\bin\Debug\proiect.pdb
+D:\Proiect II\proiect-II\obj\Debug\proiect.exe
+D:\Proiect II\proiect-II\obj\Debug\proiect.pdb
+D:\Proiect II\proiect-II\obj\Debug\proiect.Level1.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Interop.MediaPlayer.dll
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Interop.WMLSS.dll
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Interop.WMPDXMLib.dll
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Interop.WMPLauncher.dll
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Interop.WMPLib.dll
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.exe
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.pdb
+D:\facultate++\sem2\proiect-II-Second\bin\Debug\proiect.exe.config
+D:\facultate++\sem2\proiect-II-Second\bin\Debug\proiect.exe
+D:\facultate++\sem2\proiect-II-Second\bin\Debug\proiect.pdb
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.Level1.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\Level_2.Level2.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.signup.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.start.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.joc.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\sem2\proiect-II-Second\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.csproj.AssemblyReference.cache
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Interop.MediaPlayer.dll
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Interop.WMLSS.dll
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Interop.WMPDXMLib.dll
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Interop.WMPLauncher.dll
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Interop.WMPLib.dll
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.csproj.ResolveComReference.cache
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.Level1.resources
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\Level_2.Level2.resources
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.start.resources
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.joc.resources
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.Properties.Resources.resources
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.csproj.GenerateResource.cache
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.csproj.CoreCompileInputs.cache
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.exe
+D:\facultate++\sem2\New folder\proiect-II-Second\obj\Debug\proiect.pdb
+D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.exe.config
+D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.exe
+D:\facultate++\sem2\New folder\proiect-II-Second\bin\Debug\proiect.pdb
